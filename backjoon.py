@@ -169,26 +169,98 @@
 # print(sum(ave)/n)
 
 #8959번
-n = int(input())
+# n = int(input())
 
-for i in range(n):
-    s = input()
+# for i in range(n):
+#     s = input()
 
-    score = 0
-    cnt = 0
-    for j in range(len(s)):
-        if s[j]=="o":
-            cnt += 1
-            score += cnt
-        elif s[j]=="x":
-            score += 0
-            cnt = 0
-        print(score)
-
-
+#     score = 0
+#     cnt = 0
+#     for j in range(len(s)):
+#         if s[j]=="o":
+#             cnt += 1
+#             score += cnt
+#         elif s[j]=="x":
+#             score += 0
+#             cnt = 0
+#     print(score)
 
 
+#4344
+# C = int(input())
+# for _ in range (C):
+#     cnt = 0
+#     score = list(map(int,input().split()))
+#     N = int(score[0])
+#     avg = sum(score[1:])/N
+#     for i in range (1, N+1):
+#         if score[i] > avg :
+#             cnt += 1
+#     print("%.3f%%"%round(cnt/N*100,3))
+#4673
+# self_num = set(range(1, 10001))
+# generated_num = set()
+# for i in range(1, 10001):
+#     for j in str(i):
+#         i += int(j)
+#     generated_num.add(i)
+# self_num = self_num - generated_num
+# for i in sorted(self_num):
+#     print(i)
+# 1065
+# n = int(input())
+# hansu = 0
+# for i in range(1, n + 1):
+#     if i < 100:
+#         hansu += 1
+#     else:
+#         ns = list(map(int, str(i)))
+#         if ns[0] - ns[1] == ns[1] - ns[2]:
+#             hansu += 1
+# print(hansu)
 
+#11654번 아스키 코드
+# a = input()
+ 
+# print (ord(a))
 
+#11720번
+# a = int(input())
+# n = list(input())
+# sum = 0
+# for i in n:
+#     sum += int(i)
+# print(sum)
 
+#10809번 알바벳찾기
+# S = str(input())
+# Alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] #a-z 리스트
+# num = [-1 for i in range(26)] #-1로 구성된 리스트
+# for i in range(len(S)): #입력된 단어에 있는 문자 갯수만큼 반복
+#     for j in range(len(Alpha)):  #알파벳 갯수만큼 반복
+#         if S[i] == Alpha[j]: #입력된 문자랑 알파벳이 같다면
+#             if num[j] == -1: #처음 등장하는 위치를 아직 모른다면
+#                 num[j] = i #해당 알파벳의 자리에 위치 넣는다
+# for i in range(len(num)):
+#     print(num[i], end=' ')
+
+#2675번
+# n = int(input())
+# for _ in range(n):
+#     cnt, word = input().split()
+#     for x in word:
+#         print(x*int(cnt), end='')  # end='' 옆으로 붙임
+#     print()  # 줄넘김
+
+#1157번
+word = input().lower()
+word_list = list(set(word))
+cnt = []
+for i in word_list:
+    count = word.count(i)
+    cnt.append(count)
+if cnt.count(max(cnt)) >= 2:
+    print("?")
+else:
+    print(word_list[(cnt.index(max(cnt)))].upper())
 
