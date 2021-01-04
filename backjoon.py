@@ -253,14 +253,77 @@
 #     print()  # 줄넘김
 
 #1157번
-word = input().lower()
-word_list = list(set(word))
-cnt = []
-for i in word_list:
-    count = word.count(i)
-    cnt.append(count)
-if cnt.count(max(cnt)) >= 2:
-    print("?")
-else:
-    print(word_list[(cnt.index(max(cnt)))].upper())
+# word = input().lower()
+# word_list = list(set(word))
+# cnt = []
+# for i in word_list:
+#     count = word.count(i)
+#     cnt.append(count)
+# if cnt.count(max(cnt)) >= 2:
+#     print("?")
+# else:
+#     print(word_list[(cnt.index(max(cnt)))].upper())
+
+# 1152번
+#1
+# string = input("")
+# if string == " ": # 문장 자체가 공백인 경우 
+#     print(0)
+# else : 
+#     words = string.split(" ") # 띄어쓰기로 구분
+#     while '' in words : #문장 양쪽에 있는 공백이 없어질 때까지 반복
+#         words.remove("")
+# print(len(words))
+#2
+# string = list()
+# string = input().split()
+# print(len(string))
+
+#2908번
+# num1, num2 = input().split()
+# num1 = int(num1[::-1])  # [::-1] : 역순
+# num2 = int(num2[::-1])
+
+# if num1 > num2:
+#     print(num1)
+# else :
+#     print(num2)
+
+#5622번
+# dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+# a = input()
+# ret = 0
+# for j in range(len(a)):
+#     for i in dial:
+#         if a[j] in i:
+#             ret += dial.index(i)+3
+# print(ret)
+
+#2941
+# a = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# b = input()
+# for i in a:
+#     b = b.replace(i, 'a')
+# print(len(b))
+
+#1316번
+# def check(a):
+#     alpha = [0 for i in range(26)]
+#     b = list(a)
+#     cnt = 1
+#     for i in b:
+#         if alpha[ord(i) - 97] == 0:
+#             alpha[ord(i) - 97] = cnt
+#             cnt += 1
+#         elif alpha[ord(i) - 97] != 0:
+#             if cnt - alpha[ord(i) - 97] != 1:
+#                 return False
+#     return True
+# t = int(input())
+# cnt = 0
+# for i in range(t):
+#     word = input()
+#     if check(word):
+#         cnt += 1
+# print(cnt)
 
