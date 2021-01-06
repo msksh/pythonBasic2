@@ -327,3 +327,170 @@
 #         cnt += 1
 # print(cnt)
 
+# #1712번
+# a, b, c = map(int, input().split())
+# if b >= c:
+#     print(-1)
+# else:
+#     print((a // (c - b)) + 1)
+
+#2292
+# n = int(input())
+# cnt = 1
+# cnt_six = 6
+# count = 1
+# while n > cnt:
+#     count += 1
+#     cnt += cnt_six
+#     cnt_six += 6
+# print(count)
+
+#2293
+# a = int(input())
+# i = 0
+# while a >0:
+#     a -= i
+#     i += 1
+    
+# a = i+a-1
+# res = str(a)+'/'+str(i-a)
+# if i %2 == 0:
+#     res = str(i-a)+'/'+str(a)
+
+# print(res)
+
+#2869
+# a, b, v = map(int, input().split())
+# ls = 0
+# if (v - b) % (a - b) != 0:
+#     ls = ((v - b) // (a - b)) + 1
+# else:
+#     ls = ((v - b) // (a - b))
+# print(ls)
+
+#10250
+# t = int(input())
+# for i in range(t):
+#     h, w, n = map(int, input().split())
+#     f = 0
+#     ho = 0
+#     if n % h == 0:
+#         f = h * 100
+#         ho = n // h
+#     else:
+#         f = (n % h) * 100
+#         ho = 1 + n // h
+#     print(f + ho)
+
+#2775
+# Case = input()
+# for _ in range(int(Case)):
+#     k = int(input())
+#     n = int(input())
+#     num = [i for i in range(1, n + 1)]
+#     for _ in range(k):
+#         for j in range(1, n):
+#             num[j] += num[j-1]
+#     print(num[-1])
+#
+#107577
+# a,b = list(map(int, input().split()))
+# print(a+b)
+#
+#2839번
+# n = int(input())
+# cnt = 0
+
+# while 1:
+#     if (n % 5) == 0 :
+#         cnt += (n // 5)
+#         print(cnt)
+#         break
+#     n -= 3
+#     cnt += 1
+#     if (n <0):
+#         print(-1)
+#         break
+#1011번
+# t = int(input())
+# for i in range(t):
+#     a, b = map(int, input().split())
+#     c = b - a
+#     num = 1
+#     while True:
+#         if num ** 2 <= c < (num + 1) ** 2:
+#             break
+#         num += 1
+#     if num ** 2 == c:
+#         print((num * 2) - 1)
+#     elif num ** 2 < c <= num ** 2 + num:
+#         print(num * 2)
+#     else:
+#         print((num * 2) + 1)
+
+
+#1978번
+# n = int(input())
+# sosu = list(map(int, input().split()))
+# def prime(num):
+#     if num == 1:
+#         return False
+#     elif num == 2:
+#         return True
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#     return True
+# count = 0
+# for i in sosu:
+#     if prime(i):
+#         count += 1
+# print(count)
+
+#2581번
+# sosu = [0 for i in range(10001)]
+# sosu[1] = 1
+# for i in range(2, 98):
+#     for j in range(i * 2, 10001, i):
+#         sosu[j] = 1
+# m = int(input())
+# n = int(input())
+# sum = 0
+# min = 0
+# for i in range(n, m - 1, -1):
+#     if sosu[i] == 0:
+#         sum += i
+#         min = i
+# if sum == 0:
+#     print(-1)
+# else:
+#     print(sum, min, sep='\n')
+
+#11653
+# N=int(input())
+# i=2
+# while N+1:
+#     if N%i==0:
+#         print(i)
+#         N//=i
+#         continue
+#     i+=1
+#     if i>N:
+#         break
+#1085번
+# a, b, c, d = list(map(int, input().split()))
+# print(min(a, b, c - a, d - b))
+
+#3009번
+# x_ = []
+# y_ = []
+# for i in range(3):
+#         x, y = map(int, input().split())
+#         x_.append(x)
+#         y_.append(y)
+# for i in range(3):
+#         if x_.count(x_[i]) == 1:
+#                 x = x_[i]
+#         if y_.count(y_[i]) == 1:
+#                 y = y_[i]
+# print(x, y)
